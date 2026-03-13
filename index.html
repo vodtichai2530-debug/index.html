@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ของฉัน</title>
+    <style>
+        /* ส่วนของ CSS สำหรับตกแต่ง */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        ul {
+            list-style-position: inside;
+            text-align: left;
+            display: inline-block;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="container">
+        <h1 id="welcome-text">ยินดีต้อนรับเข้าสู่เว็บไซต์ของฉัน</h1>
+
+        <img src="https://via.placeholder.com/600x300" alt="รูปภาพประกอบ">
+
+        <p>นี่คือเว็บไซต์ตัวอย่างที่สร้างขึ้นด้วย HTML, CSS และ JavaScript พื้นฐาน เพื่อแสดงวิธีการทำงานเบื้องต้นของการพัฒนาเว็บ</p>
+
+        <h3>สิ่งที่คุณจะได้เรียนรู้:</h3>
+        <ul>
+            <li>การวางโครงสร้างด้วย HTML</li>
+            <li>การตกแต่งหน้าตาด้วย CSS</li>
+            <li>การสร้างการโต้ตอบด้วย JavaScript</li>
+        </ul>
+
+        <br><br>
+        <a href="https://www.google.com" target="_blank">ไปที่ Google</a>
+
+        <hr>
+
+        <div class="interactive-section">
+            <h3>ทักทายกันหน่อย!</h3>
+            <input type="text" id="userName" placeholder="กรอกชื่อของคุณที่นี่">
+            <button onclick="sayHello()">ตกลง</button>
+            <p id="greeting-display" style="font-weight: bold; color: #007bff; margin-top: 15px;"></p>
+        </div>
+    </div>
+
+    <script>
+        // ส่วนของ JavaScript
+        
+        // ฟังก์ชันสำหรับปุ่มทักทาย
+        function sayHello() {
+            const name = document.getElementById('userName').value;
+            const display = document.getElementById('greeting-display');
+            
+            if (name.trim() !== "") {
+                display.innerText = "สวัสดี " + name + " ยินดีต้อนรับ!";
+            } else {
+                display.innerText = "กรุณากรอกชื่อของคุณก่อนครับ";
+            }
+        }
+
+        // แสดง Alert ทันทีเมื่อโหลดหน้าเว็บ (ถ้าต้องการ)
+        // window.onload = function() {
+        //     alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
+        // };
+    </script>
+
+</body>
+</html>
